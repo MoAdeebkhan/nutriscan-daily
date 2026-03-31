@@ -14,7 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      food_logs: {
+        Row: {
+          calories: number
+          carbs: number
+          category: string
+          created_at: string
+          fat: number
+          fiber: number
+          food_name: string
+          health_rating: number
+          id: string
+          nutrition_data: Json | null
+          protein: number
+          user_id: string
+        }
+        Insert: {
+          calories?: number
+          carbs?: number
+          category?: string
+          created_at?: string
+          fat?: number
+          fiber?: number
+          food_name: string
+          health_rating?: number
+          id?: string
+          nutrition_data?: Json | null
+          protein?: number
+          user_id: string
+        }
+        Update: {
+          calories?: number
+          carbs?: number
+          category?: string
+          created_at?: string
+          fat?: number
+          fiber?: number
+          food_name?: string
+          health_rating?: number
+          id?: string
+          nutrition_data?: Json | null
+          protein?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
